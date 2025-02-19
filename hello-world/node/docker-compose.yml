@@ -1,0 +1,14 @@
+version: '3'
+services:
+  node-hello-world:
+    image: node-hello-world:v1
+    container_name: node-hello-world
+    restart: on-failure:5
+    ports:
+      - "3000:3000"
+    networks:
+      - node-hello-world
+
+networks:
+  node-hello-world:
+    driver: bridge

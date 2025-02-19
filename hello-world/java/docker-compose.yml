@@ -1,0 +1,14 @@
+version: '3'
+services:
+  java-hello-world:
+    image: java-hello-world:v1
+    build:
+      context: .
+    ports:
+      - "9090:9090"
+    networks:
+      - java-hello-world
+
+networks:
+  java-hello-world:
+    driver: bridge

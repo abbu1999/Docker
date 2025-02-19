@@ -1,0 +1,14 @@
+version: '3'
+services:
+  python-hello-world:
+    image: python-hello-world:v1
+    container_name: python-hello-world
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    networks:
+      - python-hello-world
+
+networks:
+  python-hello-world:
+    driver: bridge
